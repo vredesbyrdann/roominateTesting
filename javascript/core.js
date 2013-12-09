@@ -84,15 +84,15 @@ function roomView(a) {
 	});
 }
 
-function coreView(a, b, c) {
-	App.Views.a = Backbone.View.extend({
+function coreView(a, b) {
+	App.Views.Core = Backbone.View.extend({
 		initialize: function() {
 			_.bindAll(this, "render");
 		},
 		render: function() {	
 			var $container = this.$(".listing").empty();
-			b.each(function(item) {
-				new c({
+			a.each(function(item) {
+				new b({
 					model: item,
 					$container: $container
 				}).render();
